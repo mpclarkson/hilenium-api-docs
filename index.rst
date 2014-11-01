@@ -3,8 +3,13 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Hilenium Api Documentation
-===========================================
+Introduction
+============
+
+.. toctree::
+   :hidden:
+
+   self
 
 The `Hilenium`_ public API follows REST conventions and uses HTTP verbs and response codes to ensure you can securely access resources without requiring complex libraries. Cross-origin resource sharing is supported. All responses are in JSON format.
 
@@ -34,12 +39,12 @@ Authentication is conducted using **HTTP Basic** over **HTTPS**. You must provid
 
 
 Rate Limits
-_____________
+___________
 
 While we do keep track of requests made with each Api key, we do not *currently* impose any rate limits or restrictions on the number of requests that can be made. This may change in the future.
 
 Response Codes
-__________________
+______________
 
 Standard HTTP response codes are used. Anything in the 2XX range indicates a successful response and the 4XX range indicates there is a problem with your request. Common response codes used in the Api are:
 
@@ -56,7 +61,7 @@ Standard HTTP response codes are used. Anything in the 2XX range indicates a suc
 - 404: Resource could not be found.
 
 HTTP Methods
-_______________________
+____________
 
 The following HTTP methods available via the Api are:
 
@@ -68,15 +73,13 @@ The following HTTP methods available via the Api are:
 .. note:: Not all methods are permitted or are available for all resources.
 
 Resources
-===========
+_________
 
-The Api provides access to the following resources.
+For detailed information about the api resources please see the following sections.
 
-- :doc:`resources/users`
-- :doc:`resources/organisations`
-- :doc:`resources/projects`
-- :doc:`resources/blocks`
-- :doc:`resources/assets`
-- :doc:`resources/comments`
+.. toctree::
+   :maxdepth: 2
+
+   resources/index
 
 .. _Hilenium: http://www.hilenium.com
