@@ -1,8 +1,10 @@
 Resources
-=============
+=========
+
+The following Hilenium objects are available via the API.
 
 .. toctree::
-  :maxdepth: 2
+  :maxdepth: 1
 
   users
   organisations
