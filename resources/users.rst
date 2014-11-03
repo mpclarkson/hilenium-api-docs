@@ -30,13 +30,6 @@ __________
 
    Returns all users in the organization.
 
-   **Example request**:
-
-   .. sourcecode:: http
-
-      GET /users.json HTTP/1.1
-      Accept: application/json
-
    :query offset: Default is 0
    :query limit: Default is 30
 
@@ -45,8 +38,7 @@ __________
    .. sourcecode:: http
 
       HTTP/1.1 200 OK
-      Vary: Accept
-      Content-Type: text/javascript
+      Content-Type: application/json
 
         [
           {
@@ -89,13 +81,6 @@ _____________
 
    Creates a new user in the organisation.
 
-   **Example Request**
-
-   .. sourcecode:: http
-
-      POST /users.json HTTP/1.1
-      Accept: application/json
-
    :<json string email: Unique email address
    :<json string group_name: Name of the group the user is in
    :<json boolean active: Active (default is true)
@@ -111,7 +96,6 @@ _____________
    .. sourcecode:: http
 
       HTTP/1.1 201 OK
-      Vary: Accept
       Content-Type: application/json
 
       {
@@ -134,7 +118,7 @@ _____________
 Retrieve a User
 _______________
 
-.. http:get:: /users/[id]).json
+.. http:get:: /users/[id].json
 
    Returns a single user by their id.
 
@@ -143,7 +127,6 @@ _______________
    .. sourcecode:: http
 
       HTTP/1.1 200 OK
-      Vary: Accept
       Content-Type: application/json
 
           {
@@ -170,13 +153,6 @@ _____________
 
    Updates a user.
 
-   **Example Request**
-
-   .. sourcecode:: http
-
-      PATCH /users.json HTTP/1.1
-      Accept: application/json
-
    :<json string email: Unique email address
    :<json string group_name: Name of the group the user is in
    :<json boolean active: Active (default is true)
@@ -192,8 +168,6 @@ _____________
    .. sourcecode:: http
 
       HTTP/1.1 204 OK
-      Vary: Accept
-      Content-Type: application/json
 
 Delete a User
 _____________
