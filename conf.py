@@ -37,7 +37,7 @@ rst_epilog = '.. |web_url| replace:: %s' % web_url
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinxcontrib.httpdomain']
+extensions = ['sphinxcontrib.httpdomain', 'sphinxcontrib.phpdomain']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

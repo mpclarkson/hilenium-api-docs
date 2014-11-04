@@ -7,21 +7,21 @@ Users
 
 Users are individuals who have access to Hilenium. You can only access users in your organization.
 
-====================   ===============
-Property               Description
-====================   ===============
-id                     Unique identifier
-email                  Email address
-group_name             The group the user is in
-active                 Identifies if the user is enabled or not (boolean)
-profile.first_name     First name
-profile.last_name      Last name
-profile.initials       2-3 length string that identifies the user in comments
-profile.job_title      Job title
-profile.bio            Personal Bio
-profile.work_phone     Work phone number
-profile.mobile_phone   Mobile (cell) phone
-====================   ===============
+====================  =======  ===============
+Property              Type     Description
+====================  =======  ===============
+id                    int      Unique identifier
+email                 string   Email address
+group_name            string   The group the user is in. This determine permissions.
+active                bool     Identifies if the user is enabled or not (boolean)
+profile.first_name    string   First name
+profile.last_name     string   Last name
+profile.initials      string   2-3 characters that identifies the user in comments
+profile.job_title     string   Job title
+profile.bio           string   Personal Bio
+profile.work_phone    string   Work phone number
+profile.mobile_phone  string   Mobile (cell) phone
+====================  =======  ===============
 
 List Users
 __________
@@ -172,6 +172,6 @@ _____________
 Delete a User
 _____________
 
-You cannot currently delete users in Hilenium. Instead you should set their 'active' status to 'false'.
+You cannot currently delete users in Hilenium. Instead set their 'active' status to 'false'.
 
 

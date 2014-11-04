@@ -6,10 +6,15 @@
 Hilenium API Documentation
 ==========================
 
+.. toctree::
+  :hidden:
+
+  Introduction <self>
+
 `Hilenium`_ is a SaaS platform that provides a suite of marketing workflow templates and collaboration tools to help
 digital agencies, designers and marketers deliver amazing products and campaigns.
 
-This document outlines the Hilenium public API that is available to subscribers.
+This document describes the API that is available to subscribers.
 
 Table of Contents
 _________________
