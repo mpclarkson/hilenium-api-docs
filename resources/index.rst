@@ -7,8 +7,9 @@ The following Hilenium objects are available via the API.
   :maxdepth: 1
 
   users
-  organisations
+  groups
+  organizations
   projects
-  blocks
+  project_users
   assets
   comments

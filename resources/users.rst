@@ -4,24 +4,25 @@ Users
 .. toctree::
   :maxdepth: 2
 
-
 Users are individuals who have access to Hilenium. You can only access users in your organization.
 
-====================  =======  ===============
-Property              Type     Description
-====================  =======  ===============
-id                    int      Unique identifier
-email                 string   Email address
-group_name            string   The group the user is in. This determine permissions.
-active                bool     Identifies if the user is enabled or not (boolean)
-profile.first_name    string   First name
-profile.last_name     string   Last name
-profile.initials      string   2-3 characters that identifies the user in comments
-profile.job_title     string   Job title
-profile.bio           string   Personal Bio
-profile.work_phone    string   Work phone number
-profile.mobile_phone  string   Mobile (cell) phone
-====================  =======  ===============
+====================  ========  ===============
+Property              Type      Description
+====================  ========  ===============
+id                    int       Unique identifier
+email                 string    Email address
+group_name            string    The group the user is in (determines system permissions).
+active                bool      Identifies if the user is enabled
+created               datetime  Date created
+modified              datetime  Date last modified
+profile.first_name    string    First name
+profile.last_name     string    Last name
+profile.initials      string    2-3 characters that identifies the user in comments
+profile.job_title     string    Job title
+profile.bio           string    Personal Bio
+profile.work_phone    string    Work phone number
+profile.mobile_phone  string    Mobile (cell) phone
+====================  ========  ===============
 
 List Users
 __________
@@ -98,21 +99,21 @@ _____________
       HTTP/1.1 201 OK
       Content-Type: application/json
 
-      {
-        "id": 1236,
-        "email": "user2@yourorganisation.com",
-        "group_name": "Editor",
-        "active": true,
-        "profile": {
-          "first_name": "New",
-          "last_name": "User",
-          "initials": "NU",
-          "job_title": "New User",
-          "bio": null,
-          "work_phone": null,
-          "mobile_phone": null
-        }
-      }
+          {
+            "id": 1236,
+            "email": "user2@yourorganisation.com",
+            "group_name": "Editor",
+            "active": true,
+            "profile": {
+              "first_name": "New",
+              "last_name": "User",
+              "initials": "NU",
+              "job_title": "New User",
+              "bio": null,
+              "work_phone": null,
+              "mobile_phone": null
+            }
+          }
 
 
 Retrieve a User
@@ -151,17 +152,7 @@ _____________
 
 .. http:patch:: /users/[id].json
 
-   Updates a user.
-
-   :<json string email: Unique email address
-   :<json string group_name: Name of the group the user is in
-   :<json boolean active: Active (default is true)
-   :<json string profile.first_name: First name
-   :<json string profile.last_name: Last name
-   :<json string profile.initials: Initials/short identifier (3 char max)
-   :<json string profile.job_title: Job title
-   :<json string profile.work_phone: Work telephone number
-   :<json string profile.mobile_phone: Mobile telephone number
+   Updates a user. You only need include the properties you wish to update in the JSON object.
 
    **Example Response**
 
@@ -173,5 +164,3 @@ Delete a User
 _____________
 
 You cannot currently delete users in Hilenium. Instead set their 'active' status to 'false'.
-
-
